@@ -14,6 +14,11 @@ using System.Threading.Tasks;
 
 public class GenerateObject : MonoBehaviour
 {
+
+    //private string DRBE_GUI_Folder_Path = @"C:\Users\timli\AppData\Local\Packages\106b18ec-5180-4642-8a0e-198353957681_kbtfgvzxh186t\LocalState\Simulator File\Scenario File\DRBE_New.dsc"; //Change this path to your AppData path
+
+    private string DRBE_GUI_Folder_Path = "";
+
     #region private members 	
     private TcpClient socketConnection;
     private Thread clientReceiveThread;
@@ -33,9 +38,16 @@ public class GenerateObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DRBE_GUI_Folder_Path = Application.dataPath.Substring(0, Application.dataPath.Length-10) + "\\Simulator File\\Scenario File\\DRBE_New.dsc";
+        print(DRBE_GUI_Folder_Path);
+        
         Read_File_Generate_s();
         ConnectToTcpServer();
 
+    }
+    void OnGUI()
+    {
+        GUILayout.Label(DRBE_GUI_Folder_Path);
     }
 #if UNITY_STANDALONE_WIN || UNITY_EDITOR
     [DllImport("user32.dll", EntryPoint = "SetWindowPos")]
@@ -197,8 +209,7 @@ public class GenerateObject : MonoBehaviour
     public int objectcount = 0;
     void Read_File_Generate_s()
     {
-        //string path = @"C:/Users/timli/TimT1/Assets/Resource/User_Input.dsc";
-        string path = @"C:\Users\timli\AppData\Local\Packages\106b18ec-5180-4642-8a0e-198353957681_kbtfgvzxh186t\LocalState\Simulator File\Scenario File\DRBE_New.dsc";
+        string path = DRBE_GUI_Folder_Path;
         StreamReader reader = new StreamReader(path);
         string result = reader.ReadToEnd();
         //Read the text from directly from the test.txt file

@@ -1,0 +1,41 @@
+DRBE Transmitter
+Object ID: {2}
+--------------------Initial Property-------------------------
+Coordination System: {Global Frame \ WGS84}
+If using Cartesian \ Earth Cent: ------------------------------------------------------
+Initial Position X: {20}
+Initial Position Y: {20}
+Initial Position Z: {0}
+If using Global Frame \ WGS84: --------------------------------------------------------
+Latitude: {30.5}
+longtitude: {29.5}
+If using Scenario Center Frame: --------------------------------------------------------
+Initial Scenario Center Position X: {-365}
+Initial Scenario Center Position Y: {55690}
+Initial Scenario Center Position Z: {4.7929}
+If using Object Reference Frame: -------------------------------------------------------
+Referenced Object ID: {0}
+Velocity: ------------------------------------------------------------------------------
+Initial Velocity X: {20}
+Initial Velocity Y: {20}
+Initial Velocity Z: {0}
+Acceleration: --------------------------------------------------------------------------
+Initial Acceleration X: {0}
+Initial Acceleration Y: {0}
+Initial Acceleration Z: {0}
+Orientation: ---------------------------------------------------------------------------
+Initial Pitch: {20}
+Initial Roll : {0}
+Initial Yaw  : {0}
+Steering Angle: ------------------------------------------------------------------------
+Electronic Steering Angle Azimuth: {10}
+Electronic Steering Angle Elevation: {10}
+Mechanical Steering Angle Azimuth: {-10}
+Mechanical Steering Angle Elevation: {30}
+Antenna Fidelity Order 4: ------ -------------------------------------------------------
+Number of Antenna on Azimuth: {20}
+Number of Antenna on Elevation: {10}
+Element Spacing: {0.5}
+Beam width on Azimuth: {10}
+Beam width on Elevation: {10}
+Backlobe Scaling: {50}
